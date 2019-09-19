@@ -9,7 +9,7 @@
                     <div class="introduce-via" id="menuBlogAvatar"></div>
                 </div>
                 <div id="introduce"></div>
-				<div id="p_b_follow"><a href="javascript:void(0);" onclick="follow('61118ff5-a5ac-e611-845c-ac853d9f53ac')">+加关注</a></div>
+                
             </div>
 
             <!-- 导航 -->
@@ -17,17 +17,18 @@
             <div class="icon-list">
                 <ul>
                     <li><a href="https://www.cnblogs.com/mingyue5826/" target="_self">首页</a></li>
-                    <li><a href="https://www.cnblogs.com/mingyue5826" target="_blank">联系</a></li>
+                    <li><a href="https://msg.cnblogs.com/send/mingyue5826" target="_blank">联系</a></li>
                     <li><a href="https://www.cnblogs.com/mingyue5826/rss" target="_blank">订阅</a></li>
                     <li><a href="https://i.cnblogs.com/" target="_blank">管理</a></li>
                     <li><a href="https://github.com/ming5826" target="_blank">GitHub</a></li>
-                    <li><a href="hhttps://www.cnblogs.com/mingyue5826/" target="_blank">CNBlogs</a></li>
+                    <li><a href="https://gitee.com/mingyue5826" target="_blank">码云</a></li>
                 </ul>
-            </div>
-			
-			<div align="center"><span>————访客统计————</span></div>
-            <div align="center"><a href="https://info.flagcounter.com/NQjf"><img src="https://s04.flagcounter.com/countxl/NQjf/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a></div>	
-			
+            </div>        
+
+            <div align="center"><span>————访客统计————</span></div>
+            <div align="center"><a href="https://info.flagcounter.com/NQjf"><img src="https://s04.flagcounter.com/countxl/NQjf/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a></div>
+
+
             <!-- 随笔分类 -->
             <div class="m-list-title"><span>随笔分类</span></div>
             <div class="m-icon-list" id="sb-classify"></div>
@@ -100,6 +101,7 @@
          GhUserName: 'ming5826', // GitHub用户名(不是昵称)，注意大小写
         GhRepositories: 'Cnblogs-Theme-SimpleMemory', // GitHub主题仓库名称
         GhVersions : 'd8332502e3e16b5c20d808583b73fd6115bf6645', // GitHub提交版本哈希值，根据版本加载代码，我有时候会提交代码进行调试，大家最好加载我仓库代码此处的版本 https://github.com/BNDong/Cnblogs-Theme-SimpleMemory/commits/master
+
 
         // ---- 基础信息配置 ----
         blogUser      : "明月", // 博主名称，文章后缀和主页图片上都会使用此名称
@@ -187,7 +189,7 @@
             animateSections: true
         },
 
-         // ---- 主页配置 ----
+        // ---- 主页配置 ----
         homeTopImg    : [ // 主页图片Url，推荐尺寸>= 1920*1080，支持多张，每次刷新随机设置一张
             "https://mingyue-1300243549.cos.ap-chengdu.myqcloud.com/cnblogs/home_top_bg.jpg"
         ],
@@ -207,11 +209,9 @@
 
         // ---- 页脚配置 ----
         bottomBlogroll: [ // 友情链接，[[链接名,链接]....]
-            ["申请坑位", 'https://www.cnblogs.com/mingyue5826'],
-            ["申请坑位", 'https://www.cnblogs.com/mingyue5826'],
-            ["申请坑位", 'https://www.cnblogs.com/mingyue5826'],
-            ["申请坑位", 'https://www.cnblogs.com/mingyue5826'],
-            ["申请坑位", 'https://www.cnblogs.com/mingyue5826'],
+            ["tengshe789", 'http://blog.tengshe789.tech'],
+            ["申请坑位", 'https://msg.cnblogs.com/send/mingyue5826'],
+            ["申请坑位", 'https://msg.cnblogs.com/send/mingyue5826']
         ],
         bottomText: {  // 页脚标语
             icon: "❤️", // 图标
@@ -225,7 +225,7 @@
             ['BNDong GitHub', 'https://github.com/ming5826'],
             ['BNDong Email', '1441656607@qq.com']
         ],
-        themeAuthor: false // 是否显示主题作者（原谅我的臭屁，O(∩_∩)O哈哈~）
+        themeAuthor: true // 是否显示主题作者（原谅我的臭屁，O(∩_∩)O哈哈~）
     };
 
     // start cache
@@ -273,3 +273,93 @@
     }
 </script>
 <!-- global var end -->
+
+<!-- 为页面添加爱心特效 -->
+<!-- 为页面添加爱心特效 -->
+<!-- 注释掉了
+<script type="text/javascript">
+
+(function(window,document,undefined){
+    var hearts = [];
+    
+    window.requestAnimationFrame = (function(){
+        return window.requestAnimationFrame || 
+        window.webkitRequestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+         window.oRequestAnimationFrame ||
+         window.msRequestAnimationFrame ||
+         function (callback){
+             setTimeout(callback,1000/60);
+         }
+    })();
+    
+    init();
+
+    function init(){
+        css(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: absolute;}.heart:after{top: -5px;}.heart:before{left: -5px;}");
+        attachEvent();
+        gameloop();
+    }
+
+    function gameloop(){
+        for(var i=0;i<hearts.length;i++){
+            if(hearts[i].alpha <=0){
+                document.body.removeChild(hearts[i].el);
+                hearts.splice(i,1);
+                continue;
+             }
+
+             hearts[i].y--;
+             hearts[i].scale += 0.004;
+             hearts[i].alpha -= 0.013;
+             hearts[i].el.style.cssText = "left:"+hearts[i].x+"px;top:"+hearts[i].y+"px;opacity:"+hearts[i].alpha+";transform:scale("+hearts[i].scale+","+hearts[i].scale+") rotate(45deg);background:"+hearts[i].color;
+        }
+
+        requestAnimationFrame(gameloop);
+    }
+
+    function attachEvent(){
+        var old = typeof window.onclick==="function" && window.onclick;
+        window.onclick = function(event){
+            old && old();
+            createHeart(event);
+        }
+    }
+
+    function createHeart(event){
+        var d = document.createElement("div");
+        d.className = "heart";
+        hearts.push({
+            el : d,
+            x : event.clientX - 5,
+            y : event.clientY - 5,
+            scale : 1,
+            alpha : 1,
+            color : randomColor()
+        });
+
+        document.body.appendChild(d);
+    }
+
+    function css(css){
+        var style = document.createElement("style");
+        style.type="text/css";
+        try{
+            style.appendChild(document.createTextNode(css));
+        }
+        catch(ex){
+            style.styleSheet.cssText = css;
+        }
+
+        document.getElementsByTagName('head')[0].appendChild(style);
+    }
+
+    function randomColor(){
+        return "rgb("+(~~(Math.random()*255))+","+(~~(Math.random()*255))+","+(~~(Math.random()*255))+")";
+    }
+    
+})(window,document);
+</script>
+ -->
+<!--  上面被注释了  -->
+<!--  上面被注释了  -->
