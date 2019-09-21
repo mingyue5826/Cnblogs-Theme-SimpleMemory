@@ -21,17 +21,21 @@ if (initCheck()) {
         '                <ul id="m-nav-list">' +
         '                </ul>' +
         '            </div>' +
+        '            <!-- 统计 -->' +
+        '            <div class="m" align="center">' +
+        '                 <a href="https://info.flagcounter.com/NQjf"><img src="https://s04.flagcounter.com/countxl/NQjf/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a>' +
+        '            </div>' +
         '            <!-- 日历 -->' +
         '            <span id="calendar-box"></span>' +
-		'			 <div align="center">'  +
-		'			 <div align="center"><span>————访客统计————</span></div>'+
-		'			 <div align="center"><a href="https://info.flagcounter.com/NQjf"><img src="https://s04.flagcounter.com/countxl/NQjf/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a></div>'+
         '            <!-- 找找看 -->' +
         '            <div class="m-list-title"><span>找找看</span></div>' +
         '            <div class="m-icon-list" id="sb-sidebarSearchBox"></div>' +
         '            <!-- 最新随笔 -->' +
         '            <div class="m-list-title"><span>最新随笔</span></div>' +
         '            <div class="m-icon-list" id="sb-sidebarRecentposts"></div>' +
+        '            <!-- 最新评论 -->' +
+        '            <div class="m-list-title"><span>最新评论</span></div>' +
+        '            <div class="m-icon-list" id="sb-Comment"></div>' +
         '            <!-- 我的标签 -->' +
         '            <div class="m-list-title"><span>我的标签</span></div>' +
         '            <div class="m-icon-list" id="sb-toptags"></div>' +

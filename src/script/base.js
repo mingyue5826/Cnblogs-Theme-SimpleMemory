@@ -31,6 +31,7 @@ function Base() {
             blogPostCategoryTId    : null, // 文章信息分类设置定时器ID
             entryTagTId            : null, // 文章信息标签设置定时器ID
             commentTId             : null, // 评论框设置定时器ID
+            setMenuCommentsID      : null, // 菜单设置-最新评论定时器ID
         };
 
 //----------------------------------- 初始化 -----------------------------------------//
@@ -103,6 +104,7 @@ function Base() {
         timeIds.setMenuRecordTId       = window.setInterval( setMenuData.setRecord, 1000 );
         timeIds.setMenuTopviewTId      = window.setInterval( setMenuData.setTopview, 1000 );
         timeIds.setMenuTopDiggPostsTId = window.setInterval( setMenuData.setTopDiggPosts, 1000 );
+        timeIds.setMenuCommentsId      = window.setInterval( setMenuData.setComments,1000 );
         setMenuData.setCustomData();
 
         // 添加扩展字体图标库
@@ -390,6 +392,7 @@ function Base() {
             sbArticle        = $('#sidebar_articlearchive ul li'),// 文章档案
             sbTopview        = $('#TopViewPostsBlock ul li'),     // 阅读排行
             topDiggPosts     = $('#TopDiggPostsBlock ul li'),     // 推荐排行
+            recentComments   = $('#sidebar_recentcomments ul li'),// 最新评论
             menuIntroduce    = $('#introduce'),
             menuCalendar     = $('#calendar-box'),
             menuSearchBox    = $('#sb-sidebarSearchBox'),
@@ -399,6 +402,7 @@ function Base() {
             menuClassify     = $('#sb-classify'),
             menuRecord       = $('#sb-record'),
             menuTopview      = $('#sb-topview'),
+            menuComment      = $('#sb-Comment'),
             menuTopDiggPosts = $('#sb-topDiggPosts');
 
         // 添加个人信息
@@ -503,6 +507,29 @@ function Base() {
             }
         }
 
+        function setComments() {
+            if(recentComments.length > 0 && menuComment.html() === ''){
+                menuComment.html(getComment(recentComments)).prev('.m-list-title').show();
+                bndongJs.clearIntervalTimeId(timeIds.setMenuCommentsId);
+            }
+        }
+
+        function getComment(obj){
+            var html = '<div><ul>';
+            obj.each(function (i) {
+                var x = $(obj[i])[0].className;
+                var body = $(obj[i]).prop("innerHTML");
+                if( x == "recent_comment_title"){
+                    html += '<li>' + body + '</li>';
+                }else{
+                    html += '<li><div>' + body + '</div></li>';
+                }
+                
+            });
+            html += '</ul></div>';
+            return html;
+        }
+
         function getMenuData(obj, icon) {
             var html = '<div><ul>',
                 ret  = /^[1-9]+[0-9]*$/;
@@ -531,7 +558,8 @@ function Base() {
             setRecord: setRecord,
             setTopview: setTopview,
             setTopDiggPosts: setTopDiggPosts,
-            setCustomData: setCustomData
+            setCustomData: setCustomData,
+            setComments: setComments
         }
     };
 
