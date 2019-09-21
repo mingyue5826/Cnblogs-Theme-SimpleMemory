@@ -18,7 +18,7 @@
 
 # Silence
 
-📖 本主题以阅读为核心，美化博客园的显示效果，提高用户体验
+📖 本主题以阅读为核心，美化博客园的显示效果，提高用户体验。 
 
 🍰 基于博皮“SimpleMemor”进行的修改；[页面效果](https://www.cnblogs.com/bndong/)
 
@@ -54,6 +54,3 @@
 **Cnblogs-Theme-SimpleMemory** © [BNDong](https://github.com/BNDong), Released under the [MIT](./LICENSE) License.<br>
 
 > Blog [@Blog](https://www.cnblogs.com/bndong/) · GitHub [@GitHub](https://github.com/BNDong) · Email dbnuo@foxmail.com
-
-
-

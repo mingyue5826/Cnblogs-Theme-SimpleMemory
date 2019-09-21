@@ -21,10 +21,6 @@ if (initCheck()) {
         '                <ul id="m-nav-list">' +
         '                </ul>' +
         '            </div>' +
-        '            <!-- 统计 -->' +
-        '            <div class="m" align="center">' +
-        '                 <a href="https://s01.flagcounter.com/more/ckrA"><img src="https://s01.flagcounter.com/count2/ckrA/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a>' +
-        '            </div>' +
         '            <!-- 日历 -->' +
         '            <span id="calendar-box"></span>' +
         '            <!-- 找找看 -->' +
@@ -33,9 +29,6 @@ if (initCheck()) {
         '            <!-- 最新随笔 -->' +
         '            <div class="m-list-title"><span>最新随笔</span></div>' +
         '            <div class="m-icon-list" id="sb-sidebarRecentposts"></div>' +
-        '            <!-- 最新评论 -->' +
-        '            <div class="m-list-title"><span>最新评论</span></div>' +
-        '            <div class="m-icon-list" id="sb-Comment"></div>' +
         '            <!-- 我的标签 -->' +
         '            <div class="m-list-title"><span>我的标签</span></div>' +
         '            <div class="m-icon-list" id="sb-toptags"></div>' +
