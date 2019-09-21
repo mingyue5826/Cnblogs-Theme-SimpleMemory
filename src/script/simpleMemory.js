@@ -23,7 +23,7 @@ if (initCheck()) {
         '            </div>' +
         '            <!-- 统计 -->' +
         '            <div class="m" align="center">' +
-        '                 <a href="https://info.flagcounter.com/NQjf"><img src="https://s04.flagcounter.com/countxl/NQjf/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a>' +
+        '                 <a href="https://s01.flagcounter.com/more/ckrA"><img src="https://s01.flagcounter.com/count2/ckrA/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a>' +
         '            </div>' +
         '            <!-- 日历 -->' +
         '            <span id="calendar-box"></span>' +
