@@ -16,7 +16,7 @@ function Base() {
             setMenuIntroduceTId    : null, // 菜单设置-个人信息定时器ID
             setMenuCalendarTId     : null, // 菜单设置-日历定时器ID
             setSidebarSearchTId    : null, // 菜单设置-找找看定时器ID
-			setFlagCounterId	   : null,  //菜单设置-访客统计ID
+			setFlagCounterTId	   : null,  //菜单设置-访客统计ID
             setMenuSidebarTId      : null, // 菜单设置-最新随笔定时器ID
             setMenuToptagsTId      : null, // 菜单设置-我的标签定时器ID
             setMenuClassifyTId     : null, // 菜单设置-随笔分类定时器ID
@@ -97,7 +97,7 @@ function Base() {
         timeIds.setMenuIntroduceTId    = window.setInterval( setMenuData.setIntroduce, 1000 );
         timeIds.setMenuCalendarTId     = window.setInterval( setMenuData.setCalendar, 1000 );
         timeIds.setSidebarSearchTId    = window.setInterval( setMenuData.setSidebarSearch, 1000 );
-		timeIds.setFlagCounterId       = window.setInterval( setMenuData.setFlagCounter, 1000 );
+		timeIds.setFlagCounterTId       = window.setInterval( setMenuData.setFlagCounter, 1000 );
         timeIds.setMenuSidebarTId      = window.setInterval( setMenuData.setSidebar, 1000 );
         timeIds.setMenuToptagsTId      = window.setInterval( setMenuData.setToptags, 1000 );
         timeIds.setMenuClassifyTId     = window.setInterval( setMenuData.setClassify, 1000 );
@@ -395,7 +395,7 @@ function Base() {
             menuIntroduce    = $('#introduce'),
             menuCalendar     = $('#calendar-box'),
             menuSearchBox    = $('#sb-sidebarSearchBox'),
-			menuFlagCounter  = $('sb-flagcounter'),
+			menuFlagCounter  = $('#sb-flagcounter'),
             menuArticle      = $('#sb-articlearchive'),
             menuSidebar      = $('#sb-sidebarRecentposts'),
             menuToptags      = $('#sb-toptags'),
@@ -435,7 +435,7 @@ function Base() {
         function setFlagCounter() {
             if (flagcounter.length > 0 && menuFlagCounter.html() === '') {
                 menuFlagCounter.html(getMenuData(flagcounter, 'icon-label_fill')).prev('.m-list-title').show();
-                bndongJs.clearIntervalTimeId(timeIds.setMenuFlagCounterId);
+                bndongJs.clearIntervalTimeId(timeIds.setMenuFlagCounterTId);
             }
         }
 
